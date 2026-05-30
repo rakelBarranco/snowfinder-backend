@@ -19,6 +19,7 @@ public class Estacion {
     private Integer kmPistas;
     private String descripcion;
     private Integer altitud;
+    private String webcamUrl;
 
     @OneToMany(mappedBy = "estacion", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
@@ -41,4 +42,6 @@ public class Estacion {
     public void setAltitud(Integer altitud) { this.altitud = altitud; }
     public List<Imagen> getImagenes() { return imagenes; }
     public void setImagenes(List<Imagen> imagenes) { this.imagenes = imagenes; }
+    public String getWebcamUrl() { return webcamUrl; }
+    public void setWebcamUrl(String webcamUrl) { this.webcamUrl = webcamUrl; }
 }
